@@ -1,0 +1,230 @@
+.autocomplete {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 50vw;
+    font-family: Consolas;
+    max-height: 5vh;
+    min-width: 23em;
+}
+
+.autocomplete .input-container {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+}
+
+.selectionList {
+    width: 48vw;
+    min-width: 21em;
+    position: absolute;
+    top: 105%;
+    max-height: 55vh;
+    overflow-y: auto;
+}
+
+.item {
+    display: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    align-content: center;
+    padding: 0 0.5em;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: 1em;
+    color: #333;
+}
+
+.selectionList .show {
+    display: auto;
+}
+
+.selectionList .hide {
+    display: none;
+}
+
+.item .name {
+    pointer-events: none !important;
+}
+
+.item .description {
+    pointer-events: none !important;
+}
+
+
+/*
+ * ***********************************************************
+ *   SKINS / THEMES
+ *
+ *   Obviously there is more than one way to apply css skins, but the
+ *   React way (as defined by the component author) is like so:
+ *
+ *   The Autocomplete react component takes a prop called themeClass.
+ *
+ *   For example:
+ *     <Autocomplete themeClass={'dark'} />
+ *
+ *   Or:
+ *     <Autocomplete themeClass={'light'} />
+ * ***********************************************************
+ */
+
+
+/*
+ * ***************************************
+ *                 LIGHT THEME
+ * ***************************************
+ */
+
+.light .autocomplete input {
+    border: 1px solid rgba(0,0,0,0);
+    width: 89%;
+    height: 5vh;
+    border-radius: 5vh;
+    background: rgba(245,245,245,1);
+    padding: 0 4.75vw 0 1vw;
+    box-shadow: 6px 6px 18px 4px rgba(0,0,0,0.2);
+    font-size: 1.3em;
+    color: #333;
+}
+
+.light .autocomplete input:focus {
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+}
+
+.light .searchIcon {
+    background-image: url(./magnify.svg);
+    background-repeat: no-repeat;
+    width: 3.5vh;
+    height: 3.5vh;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1em;
+}
+
+.light .item {
+    display: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    align-content: center;
+    padding: 1vh 0.5em;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: 1em;
+    color: #333;
+}
+
+.light .item .name {
+    color: #333;
+}
+
+.light .item .description {
+    color: #bbb;
+}
+
+.light .item.active {
+    background: rgba(180,180,185,0.1)
+}
+
+.light .item.selected {
+    background: rgba(180,180,185,0.05);
+}
+
+.light .item.selected .name {
+    color: rgba(255,10,55,1);
+}
+
+.light .item.selected .description {
+    color: #333;
+}
+
+
+/*
+ * ***************************************
+ *                 DARK THEME
+ * ***************************************
+ */
+
+
+.dark .autocomplete input {
+    border: 3px solid rgba(245,245,245,0);
+    width: 89%;
+    height: 5vh;
+    border-radius: 5vh;
+    background: rgba(45,45,45,1);
+    padding: 0 4.75vw 0 1vw;
+    font-size: 1.3em;
+    color: #ccc;
+}
+
+.dark .autocomplete input:focus {
+    border: 3px solid rgba(98,215,251,1);
+    outline: none;
+}
+
+.dark .searchIcon {
+    background-image: url(./magnify-light.svg);
+    background-repeat: no-repeat;
+    width: 3.5vh;
+    height: 3.5vh;
+    opacity: 0.5;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 1em;
+}
+
+.dark .selectionList {
+    width: 48vw;
+    min-width: 21em;
+    position: absolute;
+    top: 115%;
+    max-height: 55vh;
+    overflow-y: auto;
+}
+
+.dark .item {
+    display: auto;
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    align-content: center;
+    padding: 0 0.5em;
+    border-top: 1px solid rgba(180,180,185,0.2);
+    font-size: 1em;
+    color: #eee;
+}
+
+.dark .item .name {
+    color: #eee;
+}
+
+.dark .item .description {
+    color: #bbb;
+}
+
+.dark .item.active {
+    background: rgba(180,180,185,0.15);
+}
+
+.dark .item.selected {
+    background: rgba(180,180,185,0.1);
+}
+
+.dark .item.selected .name {
+    color: rgba(255,40,85,1);
+}
+
+.dark .item.selected .description {
+    color: #eee;;
+}
