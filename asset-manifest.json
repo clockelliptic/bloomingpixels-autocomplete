@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/bloomingpixels-challenge/static/css/main.dd9c7fa6.chunk.css",
+    "main.js": "/bloomingpixels-challenge/static/js/main.14cff2cc.chunk.js",
+    "main.js.map": "/bloomingpixels-challenge/static/js/main.14cff2cc.chunk.js.map",
+    "runtime-main.js": "/bloomingpixels-challenge/static/js/runtime-main.097ce6f0.js",
+    "runtime-main.js.map": "/bloomingpixels-challenge/static/js/runtime-main.097ce6f0.js.map",
+    "static/js/2.8bd0602f.chunk.js": "/bloomingpixels-challenge/static/js/2.8bd0602f.chunk.js",
+    "static/js/2.8bd0602f.chunk.js.map": "/bloomingpixels-challenge/static/js/2.8bd0602f.chunk.js.map",
+    "index.html": "/bloomingpixels-challenge/index.html",
+    "precache-manifest.edd5fcc4ea0de68e98bd971f1b447b55.js": "/bloomingpixels-challenge/precache-manifest.edd5fcc4ea0de68e98bd971f1b447b55.js",
+    "service-worker.js": "/bloomingpixels-challenge/service-worker.js",
+    "static/css/main.dd9c7fa6.chunk.css.map": "/bloomingpixels-challenge/static/css/main.dd9c7fa6.chunk.css.map",
+    "static/js/2.8bd0602f.chunk.js.LICENSE.txt": "/bloomingpixels-challenge/static/js/2.8bd0602f.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/bloomingpixels-challenge/static/media/logo.5d5d9eef.svg",
+    "static/media/Autocomplete.css": "/bloomingpixels-challenge/static/media/magnify.190dff74.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.097ce6f0.js",
+    "static/js/2.8bd0602f.chunk.js",
+    "static/css/main.dd9c7fa6.chunk.css",
+    "static/js/main.14cff2cc.chunk.js"
+  ]
+}
