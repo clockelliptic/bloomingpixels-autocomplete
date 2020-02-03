@@ -33,38 +33,46 @@ export const useArrowNavigation = (items, inputRef) => {
   const [cursor, setCursor] = useState(0);
   const [hovered, setHovered] = useState(undefined);
 
+  /*
+   *  USE KEYS FOR NAVIGATION & SELECTION
+   */
+
   const downPress = useKeyPress("ArrowDown");
   const upPress = useKeyPress("ArrowUp");
   const enterPress = useKeyPress("Enter");
 
-  useEffect(() => {
+  /*
+   *  NAMED EFFECTS:
+   */
+
+  const downArrow_Navigation = useEffect(() => {
       if (items.length && downPress) {
-      setCursor(prevState =>
-          prevState < items.length - 1 ? prevState + 1 : prevState
-      );
+        setCursor(prevState =>
+            prevState < items.length - 1 ? prevState + 1 : prevState
+        );
       }
   }, [downPress]);
 
-  useEffect(() => {
+  const upArrow_Navigation = useEffect(() => {
       if (items.length && upPress) {
           setCursor(prevState => (prevState > 0 ? prevState - 1 : prevState));
       }
   }, [upPress]);
 
-  useEffect(() => {
+  const selectWith_Enter = useEffect(() => {
       if (items.length && enterPress) {
           setSelected(items[cursor]);
       }
   }, [cursor, enterPress]);
 
-  useEffect(() => {
+  const track_hoveredItem = useEffect(() => {
       if (items.length && hovered) {
           setCursor(items.indexOf(hovered));
       }
   }, [hovered]);
 
   useEffect(() => {
-    if ( !enterPress && !upPress && !downPress) {
+    if (!enterPress && !upPress && !downPress) {
       if (inputRef) inputRef.current.focus();
     }
   }, [])

@@ -26,14 +26,14 @@ export default function SelectionList ({items, shouldDisplay, inputRef, exposeRe
                             <ListItem
                                 key={item.id}
                                 isActive={i === scrollCursorIndex}
-                                isSelected={selectedItem.name === item.name}
+                                isSelected={selectedItem.id === item.id}
                                 item={item}
                                 setSelected={setSelected}
                                 setHovered={setHovered}
                                 onClick={(e) => {
                                     inputRef.current.focus()
                                 }}
-                                exposeRef={exposeRef}
+                                exposeRef={exposeRef} /* callback to share ref with parent */
                             />
                         ))
                     }
