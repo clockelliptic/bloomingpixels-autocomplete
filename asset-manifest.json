@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bloomingpixels-autocomplete/static/css/main.af4229b0.chunk.css",
-    "main.js": "/bloomingpixels-autocomplete/static/js/main.541bf638.chunk.js",
-    "main.js.map": "/bloomingpixels-autocomplete/static/js/main.541bf638.chunk.js.map",
+    "main.js": "/bloomingpixels-autocomplete/static/js/main.52eb5a51.chunk.js",
+    "main.js.map": "/bloomingpixels-autocomplete/static/js/main.52eb5a51.chunk.js.map",
     "runtime-main.js": "/bloomingpixels-autocomplete/static/js/runtime-main.6a83b013.js",
     "runtime-main.js.map": "/bloomingpixels-autocomplete/static/js/runtime-main.6a83b013.js.map",
     "static/js/2.93b2fdca.chunk.js": "/bloomingpixels-autocomplete/static/js/2.93b2fdca.chunk.js",
     "static/js/2.93b2fdca.chunk.js.map": "/bloomingpixels-autocomplete/static/js/2.93b2fdca.chunk.js.map",
     "index.html": "/bloomingpixels-autocomplete/index.html",
-    "precache-manifest.69930d9c58782a20225aa9c333727174.js": "/bloomingpixels-autocomplete/precache-manifest.69930d9c58782a20225aa9c333727174.js",
+    "precache-manifest.ee87892f294c65198e6e91a6d0d073be.js": "/bloomingpixels-autocomplete/precache-manifest.ee87892f294c65198e6e91a6d0d073be.js",
     "service-worker.js": "/bloomingpixels-autocomplete/service-worker.js",
     "static/css/main.af4229b0.chunk.css.map": "/bloomingpixels-autocomplete/static/css/main.af4229b0.chunk.css.map",
     "static/js/2.93b2fdca.chunk.js.LICENSE.txt": "/bloomingpixels-autocomplete/static/js/2.93b2fdca.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.6a83b013.js",
     "static/js/2.93b2fdca.chunk.js",
     "static/css/main.af4229b0.chunk.css",
-    "static/js/main.541bf638.chunk.js"
+    "static/js/main.52eb5a51.chunk.js"
   ]
 }
