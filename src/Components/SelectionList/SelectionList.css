@@ -1,15 +1,3 @@
-.selectionList {
-    background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1));
-    width: 48vw;
-    min-width: 21em;
-    position: absolute;
-    top: 105%;
-    max-height: 55vh;
-    overflow-y: auto;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .item {
     display: auto;
     display: flex;
@@ -44,6 +32,18 @@
  *                 LIGHT THEME
  * ***************************************
  */
+
+ .light .selectionList {
+    background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1));
+    width: 48vw;
+    min-width: 21em;
+    position: absolute;
+    top: 105%;
+    max-height: 55vh;
+    overflow-y: auto;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
  .light .item {
     display: auto;
@@ -88,6 +88,17 @@
  *               DARK THEME
  * ***************************************
  */
+
+ .dark .selectionList {
+    width: 48vw;
+    min-width: 21em;
+    position: absolute;
+    top: 105%;
+    max-height: 55vh;
+    overflow-y: auto;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 .dark .selectionList {
     width: 48vw;
