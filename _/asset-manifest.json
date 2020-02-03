@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/bloomingpixels-autocomplete/static/css/main.253deac6.chunk.css",
+    "main.js": "/bloomingpixels-autocomplete/static/js/main.b769fdf8.chunk.js",
+    "main.js.map": "/bloomingpixels-autocomplete/static/js/main.b769fdf8.chunk.js.map",
+    "runtime-main.js": "/bloomingpixels-autocomplete/static/js/runtime-main.6a83b013.js",
+    "runtime-main.js.map": "/bloomingpixels-autocomplete/static/js/runtime-main.6a83b013.js.map",
+    "static/js/2.93b2fdca.chunk.js": "/bloomingpixels-autocomplete/static/js/2.93b2fdca.chunk.js",
+    "static/js/2.93b2fdca.chunk.js.map": "/bloomingpixels-autocomplete/static/js/2.93b2fdca.chunk.js.map",
+    "index.html": "/bloomingpixels-autocomplete/index.html",
+    "precache-manifest.32d564cf6c150dc2ff5a22809da3afab.js": "/bloomingpixels-autocomplete/precache-manifest.32d564cf6c150dc2ff5a22809da3afab.js",
+    "service-worker.js": "/bloomingpixels-autocomplete/service-worker.js",
+    "static/css/main.253deac6.chunk.css.map": "/bloomingpixels-autocomplete/static/css/main.253deac6.chunk.css.map",
+    "static/js/2.93b2fdca.chunk.js.LICENSE.txt": "/bloomingpixels-autocomplete/static/js/2.93b2fdca.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/bloomingpixels-autocomplete/static/media/logo.5d5d9eef.svg",
+    "static/media/Autocomplete.css": "/bloomingpixels-autocomplete/static/media/magnify.190dff74.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a83b013.js",
+    "static/js/2.93b2fdca.chunk.js",
+    "static/css/main.253deac6.chunk.css",
+    "static/js/main.b769fdf8.chunk.js"
+  ]
+}
