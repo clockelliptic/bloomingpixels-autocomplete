@@ -21,7 +21,7 @@ export default function App() {
         >
 
           <div className="message-alert">
-            Please scroll or swipe to navigate examples.
+            Please scroll or <em>swipe to the right</em> to navigate examples.
           </div>
 
           <div className="logo-box" />
