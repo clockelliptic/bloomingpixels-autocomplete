@@ -1,17 +1,27 @@
-import React, { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom";
+import React, { useRef } from "react";
 import { useArrowNavigation } from './hooks'
+import { Store, ACTIONS } from '../state'
 import './SelectionList.css'
 
 
-export default function SelectionList ({items, shouldDisplay, inputRef, exposeRef }) {
+export default function SelectionList ({
+    shouldDisplay,
+    inputRef,
+    listItemRefCollector,
+    onSelectionChange,
+    _onSelectionChange,
+}) {
+    const { state, dispatch } = React.useContext(Store);
+    const items = state.suggestions
+
     const listRef = useRef(null);
     const [
         selectedItem,
         scrollCursorIndex,
         setSelected,
         setHovered
-    ] = useArrowNavigation(items, inputRef)
+    ] = useArrowNavigation(items, inputRef, onSelectionChange)
+
     return (
         <div
             ref={listRef}
@@ -33,7 +43,9 @@ export default function SelectionList ({items, shouldDisplay, inputRef, exposeRe
                                 onClick={(e) => {
                                     inputRef.current.focus()
                                 }}
-                                exposeRef={exposeRef} /* callback to share ref with parent */
+                                refCollector={listItemRefCollector}
+                                onSelectionChange={onSelectionChange}
+                                _onSelectionChange={_onSelectionChange}
                             />
                         ))
                     }
@@ -42,13 +54,28 @@ export default function SelectionList ({items, shouldDisplay, inputRef, exposeRe
     );
 };
 
-const ListItem = ({ item, isActive, isSelected, setSelected, setHovered, exposeRef }) => {
+const ListItem = ({
+    item,
+    isActive,
+    isSelected,
+    setSelected,
+    setHovered,
+    refCollector,
+    onSelectionChange,
+    _onSelectionChange
+}) => {
+    const { state, dispatch } = React.useContext(Store);
     const ref = useRef(null)
-    exposeRef(ref)
+    refCollector(ref)
     return (
         <div
             className={`item ${isActive ? "active" : ""} ${isSelected ? "selected" : ""}`}
-            onClick={() => setSelected(item)}
+            onClick={() => {
+                setSelected(item)
+                onSelectionChange(item)
+                _onSelectionChange(item)
+                dispatch({ type: ACTIONS.UPDATE_QUERY, query:item.name })
+            }}
             onMouseEnter={() => setHovered(item)}
             onMouseLeave={() => setHovered(undefined)}
             ref={ref}

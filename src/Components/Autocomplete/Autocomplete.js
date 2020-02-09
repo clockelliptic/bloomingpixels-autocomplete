@@ -1,9 +1,13 @@
-import React, { useState, useRef } from 'react'
-import { useManyRefs, useSmartListDisplay } from './hooks'
+import React, { useRef } from 'react'
+import PropTypes from 'prop-types'
+import { useManyRefs, useSuggestions } from './hooks'
 import './Autocomplete.css'
-import SelectionList from '../SelectionList'
+import SelectionList from './SelectionList'
+import InputField from './InputField'
+import { Store, StoreProvider, ACTIONS } from './state'
 
-export default function Autocomplete({themeClass}){
+function Autocomplete({themeClass, onSelectionChange}){
+    const { state, dispatch } = React.useContext(Store);
     /*
      * REFS
      */
@@ -13,57 +17,48 @@ export default function Autocomplete({themeClass}){
     /*
      * UI EFFECTS
      */
-    const [listDisplay, setListDisplay] = useSmartListDisplay(inputRef, listItemRefs)
+    const [showSuggestions, setShowSuggestions] = useSuggestions(inputRef, listItemRefs)
 
     /*
-     * ASYNC DATA
+     * (PRIVATE/INTERNAL) USER-INPUT CYCLE CALLBACKS
      */
-    const [predictions, setPredictions] = useState({predictions: []});
+    const _onSelectionChange = (item) => {
+        setShowSuggestions(false)
+    }
 
     return (
-        <div className={themeClass}>
-            <div className="autocomplete">
-                <div className="input-container">
-                    <input
-                        onFocus={() => setListDisplay(true)}
-                        placeholder={"Search Locations"}
-                        type="text"
-                        name="search_places"
-                        onChange={(e) => {
-                            if (e.target.value) {
-                                fetchPredictions(setPredictions, e.target.value);
-                            } else {
-                                setPredictions({predictions: []})
-                            }
-                        }}
-                        ref={inputRef}
+            <div className={themeClass}>
+                <div className="autocomplete">
+                    <InputField
+                        inputRef={inputRef}
+                        setShowSuggestions={setShowSuggestions}
                     />
-                    <div className={"searchIcon"} />
+                    <SelectionList
+                        shouldDisplay={showSuggestions}
+                        inputRef={inputRef}
+                        listItemRefCollector={collectListItemRef}
+                        onSelectionChange={onSelectionChange}
+                        _onSelectionChange={_onSelectionChange}
+                    />
                 </div>
-                <SelectionList
-                    items={predictions['predictions']}
-                    shouldDisplay={listDisplay}
-                    inputRef={inputRef}
-                    exposeRef={collectListItemRef}
-                />
             </div>
-        </div>
     );
 }
 
-/*
- * *************************************
- *          ASYNC HELPER - fetch search results
- * *************************************
- */
+Autocomplete.defaultProps = {
+    themeClass: 'light',
+    onSelectionChange: () => {}
+}
 
-const fetchPredictions = async (handlePredictions, queryStr) => {
-    const res = await fetch("https://coding-challenge.echoandapex.com/locations?q="+queryStr)
-    res .json()
-        .then(res => {
-            if (res.predictions.length) handlePredictions(res)
-        })
-        .then(err => {
-            if (err) handlePredictions({predictions: []})
-        });
+Autocomplete.propTypes = {
+    themeClass: PropTypes.string,
+    onSelectionChange: PropTypes.func
+}
+
+export default function(props) {
+    return (
+        <StoreProvider>
+            <Autocomplete {...props} />
+        </StoreProvider>
+    )
 }

@@ -1,37 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { Store, ACTIONS } from '../state'
+import { useKeyPress } from '../hooks'
 
-export const useKeyPress = function(targetKey) {
-    const [keyPressed, setKeyPressed] = useState(false);
-
-    function downHandler(e) {
-      if (e.key === targetKey) {
-        setKeyPressed(true);
-      }
-    }
-    const upHandler = (e) => {
-      if (e.key === targetKey) {
-        setKeyPressed(false);
-      }
-    };
-
-    useEffect(() => {
-      window.addEventListener("keydown", downHandler);
-      window.addEventListener("keyup", upHandler);
-
-      return () => {
-        window.removeEventListener("keydown", downHandler);
-        window.removeEventListener("keyup", upHandler);
-      };
-    });
-
-    return keyPressed;
-  };
-
-
-export const useArrowNavigation = (items, inputRef) => {
-  const [selected, setSelected] = useState({id: null, name: null});
+export const useArrowNavigation = (items, inputRef, onSelectionChange = () => {}) => {
+  const [selected, setSelected] = useState({id: null});
   const [cursor, setCursor] = useState(0);
   const [hovered, setHovered] = useState(undefined);
+  const { state, dispatch } = React.useContext(Store);
 
   /*
    *  USE KEYS FOR NAVIGATION & SELECTION
@@ -40,6 +15,7 @@ export const useArrowNavigation = (items, inputRef) => {
   const downPress = useKeyPress("ArrowDown");
   const upPress = useKeyPress("ArrowUp");
   const enterPress = useKeyPress("Enter");
+  const escapePress = useKeyPress("Escape");
 
   /*
    *  NAMED EFFECTS:
@@ -62,6 +38,8 @@ export const useArrowNavigation = (items, inputRef) => {
   const selectWith_Enter = useEffect(() => {
       if (items.length && enterPress) {
           setSelected(items[cursor]);
+          onSelectionChange(items[cursor])
+          dispatch({ type: ACTIONS.UPDATE_QUERY, query:items[cursor].name })
       }
   }, [cursor, enterPress]);
 
