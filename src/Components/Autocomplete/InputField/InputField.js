@@ -20,7 +20,7 @@ export default function InputField ({inputRef, setShowSuggestions, value}) {
                         if (queryStr) {
                             fetchSuggestions(queryStr, handleResults);
                         } else {
-                            dispatch({ type: ACTIONS.RESET_PREDICTIONS })
+                            handleResults([])
                         }
                     }}
                     ref={inputRef}
@@ -40,10 +40,11 @@ const fetchSuggestions = async (queryStr, handleResults) => {
     const res = await fetch("https://coding-challenge.echoandapex.com/locations?q="+queryStr)
     res .json()
         .then(res => {
-            if (res.predictions.length) handleResults(res.predictions)
-            console.log(res.predictions)
+            if (res.predictions.length) {
+                handleResults(res.predictions)
+            }
         })
         .then(err => {
-            if (err) handleResults({predictions: []})
+            if (err) handleResults([])
         });
 }

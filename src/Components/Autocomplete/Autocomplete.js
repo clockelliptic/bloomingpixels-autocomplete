@@ -34,7 +34,7 @@ function Autocomplete({themeClass, onSelectionChange}){
                         setShowSuggestions={setShowSuggestions}
                     />
                     <SelectionList
-                        shouldDisplay={showSuggestions}
+                        shouldDisplay={showSuggestions && inputRef.current.value}
                         inputRef={inputRef}
                         listItemRefCollector={collectListItemRef}
                         onSelectionChange={onSelectionChange}
