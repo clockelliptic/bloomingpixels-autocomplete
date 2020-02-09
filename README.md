@@ -1,3 +1,5 @@
+View demo at: https://clockelliptic.github.io/bloomingpixels-autocomplete
+
 ![Demo Video](https://github.com/clockelliptic/bloomingpixels-autocomplete/blob/master/bloomingpixel_demo.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
