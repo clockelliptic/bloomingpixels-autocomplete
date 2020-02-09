@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bloomingpixels-autocomplete/precache-manifest.ee87892f294c65198e6e91a6d0d073be.js"
+  "/bloomingpixels-autocomplete/precache-manifest.0096143375a65408f49bd61bc27377c5.js"
 );
 
 self.addEventListener('message', (event) => {
