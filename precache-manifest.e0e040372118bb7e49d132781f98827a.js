@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1fd42c3f80709258cdf68a57116dfdf6",
+    "revision": "f7ac241e10f391bba4292439bd8cbb15",
     "url": "/bloomingpixels-autocomplete/index.html"
   },
   {
-    "revision": "3f07978e91313d777ab9",
-    "url": "/bloomingpixels-autocomplete/static/css/main.8a0c71b4.chunk.css"
+    "revision": "9a3916fe38a9fa277097",
+    "url": "/bloomingpixels-autocomplete/static/css/main.00149e0f.chunk.css"
   },
   {
     "revision": "ea471e86dda94f229d1d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bloomingpixels-autocomplete/static/js/2.f23995a8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3f07978e91313d777ab9",
-    "url": "/bloomingpixels-autocomplete/static/js/main.007b5a9b.chunk.js"
+    "revision": "9a3916fe38a9fa277097",
+    "url": "/bloomingpixels-autocomplete/static/js/main.d09ebf34.chunk.js"
   },
   {
     "revision": "d256d70dd369cfc40991",
