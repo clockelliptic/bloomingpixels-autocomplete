@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/bloomingpixels-autocomplete/static/css/main.66af9a88.chunk.css",
-    "main.js": "/bloomingpixels-autocomplete/static/js/main.cdbfec70.chunk.js",
-    "main.js.map": "/bloomingpixels-autocomplete/static/js/main.cdbfec70.chunk.js.map",
+    "main.css": "/bloomingpixels-autocomplete/static/css/main.8a0c71b4.chunk.css",
+    "main.js": "/bloomingpixels-autocomplete/static/js/main.a7cfd4ce.chunk.js",
+    "main.js.map": "/bloomingpixels-autocomplete/static/js/main.a7cfd4ce.chunk.js.map",
     "runtime-main.js": "/bloomingpixels-autocomplete/static/js/runtime-main.6a83b013.js",
     "runtime-main.js.map": "/bloomingpixels-autocomplete/static/js/runtime-main.6a83b013.js.map",
-    "static/js/2.2e068d9c.chunk.js": "/bloomingpixels-autocomplete/static/js/2.2e068d9c.chunk.js",
-    "static/js/2.2e068d9c.chunk.js.map": "/bloomingpixels-autocomplete/static/js/2.2e068d9c.chunk.js.map",
+    "static/js/2.f23995a8.chunk.js": "/bloomingpixels-autocomplete/static/js/2.f23995a8.chunk.js",
+    "static/js/2.f23995a8.chunk.js.map": "/bloomingpixels-autocomplete/static/js/2.f23995a8.chunk.js.map",
     "index.html": "/bloomingpixels-autocomplete/index.html",
-    "precache-manifest.0096143375a65408f49bd61bc27377c5.js": "/bloomingpixels-autocomplete/precache-manifest.0096143375a65408f49bd61bc27377c5.js",
+    "precache-manifest.a8d195483ba71d6bd2f52e0f697e5b08.js": "/bloomingpixels-autocomplete/precache-manifest.a8d195483ba71d6bd2f52e0f697e5b08.js",
     "service-worker.js": "/bloomingpixels-autocomplete/service-worker.js",
-    "static/css/main.66af9a88.chunk.css.map": "/bloomingpixels-autocomplete/static/css/main.66af9a88.chunk.css.map",
-    "static/js/2.2e068d9c.chunk.js.LICENSE.txt": "/bloomingpixels-autocomplete/static/js/2.2e068d9c.chunk.js.LICENSE.txt",
+    "static/css/main.8a0c71b4.chunk.css.map": "/bloomingpixels-autocomplete/static/css/main.8a0c71b4.chunk.css.map",
+    "static/js/2.f23995a8.chunk.js.LICENSE.txt": "/bloomingpixels-autocomplete/static/js/2.f23995a8.chunk.js.LICENSE.txt",
     "static/media/App.css": "/bloomingpixels-autocomplete/static/media/logo.5d5d9eef.svg",
     "static/media/InputField.css": "/bloomingpixels-autocomplete/static/media/magnify.190dff74.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6a83b013.js",
-    "static/js/2.2e068d9c.chunk.js",
-    "static/css/main.66af9a88.chunk.css",
-    "static/js/main.cdbfec70.chunk.js"
+    "static/js/2.f23995a8.chunk.js",
+    "static/css/main.8a0c71b4.chunk.css",
+    "static/js/main.a7cfd4ce.chunk.js"
   ]
 }
